@@ -1,6 +1,5 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/sks001/my-app:$COMMIT_SHA', '.']
-  # Add deployment steps here if needed (e.g., Cloud Run)
 images:
   - 'gcr.io/sks001/my-app:$COMMIT_SHA'
