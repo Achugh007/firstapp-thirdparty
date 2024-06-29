@@ -4,5 +4,5 @@ steps:
 
   # Optional: Cache headers for browser caching
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['-m', 'setmeta', '-h', 'Cache-Control:public,max-age=3600', 'gs://sks001-my-website/*']
+    args: ['-m', 'setmeta', '-h', 'Cache-Control:public,max-age=3600', 'gs://sks001-my-website/*'] 
 
