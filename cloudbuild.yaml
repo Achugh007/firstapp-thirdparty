@@ -1,5 +1,8 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/sks001/my-app:$COMMIT_SHA', '.']
-images:
-  - 'gcr.io/sks001/my-app:$COMMIT_SHA'
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', '-r', 'src/*', 'gs://sks001-my-website/']  # Replace with your bucket's URL
+
+  # Optional: Cache headers for browser caching
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['-m', 'setmeta', '-h', 'Cache-Control:public,max-age=3600', 'gs://sks001-my-website/*']
+
