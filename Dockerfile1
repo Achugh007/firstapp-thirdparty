@@ -1,3 +1,4 @@
+# This file is no longer in use.
 FROM openjdk:11-jdk # Or the appropriate Java base image
 
 # Set Working Directory in Container
